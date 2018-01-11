@@ -16,6 +16,7 @@ import { MembersComponent } from './members/members.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { FormComponent } from './form/form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +27,15 @@ import { ContactComponent } from './contact/contact.component';
     MembersComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
       {
- path: 'home',
+ path: '',
  component: HomeComponent
     },
     {
@@ -41,9 +43,13 @@ import { ContactComponent } from './contact/contact.component';
       component: AboutComponent
          },
          {
-          path: 'contact',
-          component:ContactComponent
-             }
+          path: 'form',
+          component:FormComponent
+             },
+             {
+              path: 'home',
+              component:HomeComponent
+                 }
 
     ])
   ],
